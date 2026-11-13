@@ -51,7 +51,7 @@
 
 人设档案是一份 Markdown（`.md`），描述一个人怎么说话、什么作息、什么性格。推荐用配套的 **模拟对话蒸馏 Skill**（Claude Code）从真实聊天记录自动蒸馏：
 
-> 👉 https://github.com/lingyunalingyun/Simulated-Dialogue
+> 👉 https://github.com/LangHingA/Simulated-Dialogue
 
 它会从一份聊天记录里**同时分出双方两份档案**。你也可以手写一份，只要第一行是标题：
 
