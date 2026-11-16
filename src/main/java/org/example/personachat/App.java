@@ -45,7 +45,7 @@ public class App extends Application {
     private static final String APP_VERSION = "1.1.2";
     private static final String APP_NAME = "LanHing-VirtualChat";
     private static final String UPDATE_API =
-            "https://api.github.com/repos/lingyunalingyun/LanHing-VirtualChat-Program/releases/latest";
+            "https://api.github.com/repos/langhinga/LanHing-VirtualChat-Program/releases/latest";
     private boolean seenGuide = false;             // 首次启动引导：true 表示已看过
     private boolean autoUpdate = true;             // true=新版自动下载安装；false=小版本只通知，大版本仍强制
 
@@ -261,7 +261,7 @@ public class App extends Application {
                 String tag = o.optString("tag_name", "").replaceFirst("^v", "");
                 if (tag.isEmpty() || compareVersion(tag, APP_VERSION) <= 0) return;
                 String name = o.optString("name", "v" + tag);
-                String html = o.optString("html_url", "https://github.com/lingyunalingyun/LanHing-VirtualChat-Program/releases");
+                String html = o.optString("html_url", "https://github.com/langhinga/LanHing-VirtualChat-Program/releases");
                 String body = o.optString("body", "");
                 String msiUrl = findMsiAssetUrl(o);
                 boolean major = isMajorBump(tag, APP_VERSION);
@@ -2451,7 +2451,7 @@ public class App extends Application {
         openReleasesBtn.getStyleClass().add("btn-ghost");
         openReleasesBtn.setVisible(false);
         openReleasesBtn.setManaged(false);
-        String[] latestUrl = { "https://github.com/lingyunalingyun/LanHing-VirtualChat-Program/releases" };
+        String[] latestUrl = { "https://github.com/langhinga/LanHing-VirtualChat-Program/releases" };
         openReleasesBtn.setOnAction(e -> openInBrowser(latestUrl[0]));
         checkBtn.setOnAction(e -> {
             checkBtn.setDisable(true);
@@ -2501,7 +2501,7 @@ public class App extends Application {
 
         Button repoBtn = new Button("打开 GitHub 仓库");
         repoBtn.getStyleClass().add("btn-ghost");
-        repoBtn.setOnAction(e -> openInBrowser("https://github.com/lingyunalingyun/LanHing-VirtualChat-Program"));
+        repoBtn.setOnAction(e -> openInBrowser("https://github.com/langhinga/LanHing-VirtualChat-Program"));
 
         // ===== 人设段 =====
         Label personasHint = new Label("当前时间线「" + currentTimeline + "」的双方人设档案");
@@ -2580,7 +2580,7 @@ public class App extends Application {
                 autoUpdateBox, new HBox(8, checkBtn, openReleasesBtn), updResult);
         VBox guideSec = settingsSection("使用引导", "回顾首启动的分步引导（不会重置已填资料）", guideBtn);
         VBox aboutSec = settingsSection("关于",
-                APP_NAME + " · v" + APP_VERSION + "\nMIT License · © 2026 lingyunalingyun", repoBtn);
+                APP_NAME + " · v" + APP_VERSION + "\nMIT License · © 2026 langhinga", repoBtn);
 
         // ===== 侧栏 + 内容区 =====
         ListView<String> sidebar = new ListView<>();
